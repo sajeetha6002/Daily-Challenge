@@ -1,0 +1,15 @@
+class Solution {
+    public int scoreOfString(String s) {
+        int sum=0;
+        int dif=0;
+        for(int i=1;i<s.length();i++){
+            char c=s.charAt(i);
+            char ch=s.charAt(i-1);
+            int as=(int)c;
+            int ass=(int)ch;
+            sum=Math.abs(as-ass);
+            dif=sum+dif;
+        }
+        return dif;
+    }
+}
